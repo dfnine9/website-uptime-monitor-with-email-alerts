@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated GitHub Repository Health Checker that analyzes any GitHub repo and generates a comprehensive health report (README quality, license presence, commit frequency, issue response time, code documentation coverage)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Automated GitHub Repository Health Checker
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+        Get comprehensive health reports for any GitHub repository with instant analysis of code quality, documentation, and project maintenance
+      </p>
+      <div class="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+        </svg>
+        Auto-generated tool by T.O.A.A
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Comprehensive Repository Analysis
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Our intelligent tool examines every aspect of your repository to provide actionable insights for improvement
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">README Quality Analysis</h3>
+        <p class="text-gray-600">Evaluate the completeness and quality of your README documentation to improve user onboarding.</p>
+      </div>
+      
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">License & Compliance</h3>
+        <p class="text-gray-600">Check for proper licensing and ensure your repository meets legal and compliance standards.</p>
+      </div>
+      
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Commit Activity Tracking</h3>
+        <p class="text-gray-600">Monitor commit frequency and development patterns to assess project maintenance health.</p>
+      </div>
+      
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Issue Response Analytics</h3>
+        <p class="text-gray-600">Analyze issue response times and community engagement to measure project responsiveness.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-6">
+          <h2 class="text-2xl font-bold text-white text-center">Get Your Repository Health Report</h2>
+          <p class="text-blue-100 text-center mt-2">Instant analysis, comprehensive insights</p>
+        </div>
+        <div class="px-8 py-12 text-center">
+          <div class="mb-8">
+            <span class="text-5xl font-bold text-gray-900">$19.99</span>
+            <span class="text-gray-600 ml-2">one-time purchase</span>
+          </div>
+          <ul class="text-left space-y-4 mb-8 max-w-md mx-auto">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Comprehensive health reports for any GitHub repo
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              README quality assessment and recommendations
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Code documentation coverage analysis
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Project maintenance metrics and insights
+            </li>
+          </ul>
+          <a href="#" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105 inline-block">
+            Buy Now - Get Instant Access
+          </a>
+          <p class="text-sm text-gray-500 mt-4">Secure payment processing • Instant download</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">Automated GitHub Repository Health Checker</h3>
+        <p class="text-gray-400 mb-4">Auto-generated tool by T.O.A.A</p>
+        <p class="text-gray-500 text-sm">© 2024 T.O.A.A. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
