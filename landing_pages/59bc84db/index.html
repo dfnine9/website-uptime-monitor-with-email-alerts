@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website uptime monitor that checks multiple URLs at regular intervals, logs response times and status codes, then generates availability reports and alerts for downtime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        Website Uptime Monitor
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+        Never miss downtime again. Monitor multiple URLs, track performance, and get instant alerts when your websites go offline.
+      </p>
+      <div class="bg-white rounded-lg shadow-xl p-8 mb-12 max-w-3xl mx-auto">
+        <div class="flex items-center justify-center space-x-4 text-green-600">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-lg font-semibold">Automated by T.O.A.A Technology</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Powerful Monitoring Features</h2>
+      <p class="text-xl text-gray-600">Everything you need to keep your websites running smoothly</p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Multi-URL Monitoring</h3>
+        <p class="text-gray-600">Monitor multiple websites simultaneously with regular interval checks</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+        <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Response Time Tracking</h3>
+        <p class="text-gray-600">Log detailed response times and status codes for performance insights</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+        <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a2 2 0 002 2h4a2 2 0 002-2V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Availability Reports</h3>
+        <p class="text-gray-600">Generate comprehensive uptime reports with detailed analytics</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+        <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2L3 7v11a2 2 0 002 2h10a2 2 0 002-2V7l-7-5z"></path>
+            <path d="M8 15h4v2H8v-2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Instant Alerts</h3>
+        <p class="text-gray-600">Get immediate notifications when downtime is detected</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="max-w-lg mx-auto">
+      <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6 text-white text-center">
+          <h3 class="text-2xl font-bold">Complete Monitoring Solution</h3>
+          <p class="text-blue-100 mt-2">One-time purchase, lifetime access</p>
+        </div>
+        
+        <div class="px-8 py-12 text-center">
+          <div class="mb-8">
+            <span class="text-5xl font-bold text-gray-900">$17.99</span>
+            <p class="text-gray-600 mt-2">One-time payment</p>
+          </div>
+          
+          <ul class="text-left space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Monitor unlimited URLs</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Real-time performance tracking</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Comprehensive reporting</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Instant downtime alerts</span>
+            </li>
+          </ul>
+          
+          <a href="#" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg inline-block text-center">
+            Buy Now - $17.99
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold mb-4">Website Uptime Monitor</h3>
+        <p class="text-gray-400 mb-4">Automated monitoring solution powered by T.O.A.A</p>
+        <p class="text-gray-500 text-sm">© 2024 T.O.A.A. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
