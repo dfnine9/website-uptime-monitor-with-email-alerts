@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Expense Tracker that automatically categorizes transactions from bank CSV exports and generates monthly spending reports with insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Personal Finance Expense Tracker
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+        Automatically categorize your transactions and get powerful insights into your spending habits
+      </p>
+      <div class="bg-white rounded-lg shadow-lg p-8 inline-block">
+        <p class="text-sm text-gray-500 mb-2">Auto-generated tool by</p>
+        <p class="text-lg font-semibold text-indigo-600">T.O.A.A</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        Key Features
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="text-center p-6">
+          <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">CSV Import</h3>
+          <p class="text-gray-600">Seamlessly import your bank CSV exports with just a few clicks</p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Auto-Categorization</h3>
+          <p class="text-gray-600">Intelligent automatic categorization of all your transactions</p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Monthly Reports</h3>
+          <p class="text-gray-600">Detailed monthly spending reports with visual breakdowns</p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Insights</h3>
+          <p class="text-gray-600">Actionable insights to help you make better financial decisions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+        Simple, Affordable Pricing
+      </h2>
+      <div class="max-w-md mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl p-8 border-4 border-indigo-500">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Personal Finance Tracker</h3>
+            <p class="text-gray-600">Everything you need to manage your finances</p>
+          </div>
+          <div class="mb-8">
+            <span class="text-5xl font-bold text-indigo-600">$16.99</span>
+            <span class="text-gray-500 ml-2">one-time purchase</span>
+          </div>
+          <ul class="text-left mb-8 space-y-3">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              CSV import functionality
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Automatic categorization
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Monthly reports & insights
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Lifetime updates
+            </li>
+          </ul>
+          <a href="#" class="w-full bg-indigo-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition duration-200 block text-center">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="bg-indigo-600 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Take Control of Your Finances Today
+      </h2>
+      <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+        Stop guessing where your money goes. Get clear insights and make smarter financial decisions.
+      </p>
+      <a href="#" class="bg-white text-indigo-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-200 inline-block">
+        Get Started Now - $16.99
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold">Personal Finance Expense Tracker</h3>
+        <p class="text-gray-400 text-sm">Auto-generated tool by T.O.A.A</p>
+      </div>
+      <div class="border-t border-gray-700 pt-4">
+        <p class="text-gray-400 text-sm">
+          © 2024 T.O.A.A. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
