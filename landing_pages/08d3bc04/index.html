@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal expense tracker that reads bank statements (CSV) and automatically categorizes transactions using keyword matching, then generates monthly spending reports with visualizations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        Personal Expense Tracker
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Automatically categorize your bank transactions and gain complete control over your finances with intelligent keyword matching and beautiful visualizations
+      </p>
+      <a href="#" class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition duration-200 shadow-lg">
+        Get Started for $18.99
+      </a>
+    </div>
+    
+    <!-- Hero Visual -->
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-lg shadow-2xl p-8">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div class="bg-gray-100 rounded-lg p-6 mb-4">
+              <h3 class="font-semibold text-gray-800 mb-3">Upload CSV Bank Statement</h3>
+              <div class="space-y-2">
+                <div class="bg-blue-100 p-2 rounded text-sm">📄 statement_jan_2024.csv</div>
+                <div class="bg-green-100 p-2 rounded text-sm">✓ 247 transactions processed</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="bg-gray-100 rounded-lg p-6">
+              <h3 class="font-semibold text-gray-800 mb-3">Automatic Categorization</h3>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <span>🍔 Food & Dining</span>
+                  <span class="text-red-600">-$426</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>⛽ Transportation</span>
+                  <span class="text-red-600">-$238</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>🏠 Bills & Utilities</span>
+                  <span class="text-red-600">-$892</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Why Choose Our Expense Tracker?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Built with intelligent automation to save you hours of manual categorization
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="text-center">
+          <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">📊</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">CSV Import</h3>
+          <p class="text-gray-600">
+            Simply upload your bank statement CSV files and let our tool handle the rest automatically
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🤖</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Categorization</h3>
+          <p class="text-gray-600">
+            Advanced keyword matching automatically sorts transactions into meaningful categories
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">📈</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Visual Reports</h3>
+          <p class="text-gray-600">
+            Beautiful charts and graphs show your spending patterns with monthly breakdowns
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">⚡</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Instant Insights</h3>
+          <p class="text-gray-600">
+            Get immediate understanding of your financial habits without manual data entry
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-lg mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+          Simple, Affordable Pricing
+        </h2>
+        
+        <div class="bg-white rounded-lg shadow-xl p-8 border-4 border-indigo-500">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Complete Tool</h3>
+            <p class="text-gray-600">Everything you need to track your expenses</p>
+          </div>
+          
+          <div class="mb-8">
+            <span class="text-5xl font-bold text-indigo-600">$18</span>
+            <span class="text-xl text-gray-500">.99</span>
+            <p class="text-gray-600 mt-2">One-time purchase</p>
+          </div>
+          
+          <ul class="text-left space-y-3 mb-8">
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              CSV bank statement import
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              Automatic transaction categorization
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              Monthly spending reports
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              Visual charts and graphs
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              Lifetime access & updates
+            </li>
+          </ul>
+          
+          <a href="#" class="block w-full bg-indigo-600 text-white py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition duration-200">
+            Buy Now - $18.99
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <p class="text-gray-300 mb-4">
+          Personal Expense Tracker - Auto-generated tool by T.O.A.A
+        </p>
+        <p class="text-gray-500 text-sm">
+          Take control of your finances with intelligent expense tracking
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
