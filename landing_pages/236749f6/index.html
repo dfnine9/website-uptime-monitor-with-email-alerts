@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Expense Categorizer - Automatically categorize bank transactions from CSV files using pattern matching and generate monthly spending reports with visualizations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Personal Finance Expense Categorizer
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+        Automatically categorize bank transactions from CSV files using pattern matching and generate monthly spending reports with visualizations
+      </p>
+      <div class="bg-white rounded-lg shadow-lg p-6 inline-block mb-8">
+        <span class="text-sm text-gray-500 uppercase tracking-wide">Auto-generated automation by</span>
+        <div class="text-2xl font-bold text-indigo-600 mt-2">T.O.A.A</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="container mx-auto px-4 py-16 bg-white">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="text-center p-6">
+        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">CSV Import</h3>
+        <p class="text-gray-600">Seamlessly import bank transactions from any CSV file format</p>
+      </div>
+      
+      <div class="text-center p-6">
+        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Smart Categorization</h3>
+        <p class="text-gray-600">Advanced pattern matching automatically categorizes your expenses</p>
+      </div>
+      
+      <div class="text-center p-6">
+        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Visual Reports</h3>
+        <p class="text-gray-600">Generate beautiful monthly spending reports with charts and graphs</p>
+      </div>
+      
+      <div class="text-center p-6">
+        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Time Saving</h3>
+        <p class="text-gray-600">Eliminate hours of manual transaction categorization work</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="container mx-auto px-4 py-16 bg-gray-50">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+      <div class="bg-indigo-600 text-white text-center py-8">
+        <h3 class="text-2xl font-bold mb-4">Get Started Today</h3>
+        <div class="text-5xl font-bold mb-2">$18.99</div>
+        <p class="text-indigo-200">One-time payment</p>
+      </div>
+      <div class="p-8">
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-gray-700">Automatic CSV transaction processing</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-gray-700">Smart pattern matching categorization</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-gray-700">Monthly spending reports with visuals</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-gray-700">Lifetime access and updates</span>
+          </li>
+        </ul>
+        <a href="#" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-center block transition duration-200 transform hover:scale-105">
+          Buy Now - Start Organizing Your Finances
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-400 mb-4">Personal Finance Expense Categorizer - Powered by T.O.A.A Automation</p>
+      <p class="text-sm text-gray-500">© 2024 All rights reserved. Streamline your financial tracking today.</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
