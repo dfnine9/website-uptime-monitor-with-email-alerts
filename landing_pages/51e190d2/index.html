@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker that analyzes spending patterns from bank CSV exports and generates monthly budget recommendations with category breakdowns</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        Personal Finance Tracker
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+        Transform your bank CSV exports into intelligent budget recommendations with automated spending analysis and category breakdowns
+      </p>
+      <div class="bg-white rounded-lg shadow-xl p-8 mb-12">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f0f9ff'/%3E%3Ccircle cx='200' cy='150' r='80' fill='%233b82f6' opacity='0.1'/%3E%3Cpath d='M120 100 L280 100 L280 200 L120 200 Z' fill='%23ffffff' stroke='%233b82f6' stroke-width='2'/%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%233b82f6' font-size='14' font-family='Arial'%3EFinance Dashboard%3C/text%3E%3Ccircle cx='160' cy='160' r='15' fill='%2310b981'/%3E%3Ccircle cx='200' cy='160' r='12' fill='%23f59e0b'/%3E%3Ccircle cx='240' cy='160' r='18' fill='%23ef4444'/%3E%3C/svg%3E" alt="Finance Tracker Dashboard" class="mx-auto rounded-lg shadow-md">
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
+        <p class="text-lg text-gray-600">Everything you need to take control of your finances</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">CSV Import</h3>
+          <p class="text-gray-600">Seamlessly import your bank statements from any CSV format</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Smart Analysis</h3>
+          <p class="text-gray-600">AI-powered spending pattern recognition and insights</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Category Breakdown</h3>
+          <p class="text-gray-600">Automatic categorization of expenses with detailed breakdowns</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Budget Recommendations</h3>
+          <p class="text-gray-600">Personalized monthly budget suggestions based on your habits</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gray-50 py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Simple, Affordable Pricing</h2>
+        <p class="text-lg text-gray-600">Get started with your financial journey today</p>
+      </div>
+      
+      <div class="max-w-md mx-auto">
+        <div class="bg-white rounded-lg shadow-xl p-8 border-2 border-blue-500">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Personal Finance Tracker</h3>
+            <div class="mb-6">
+              <span class="text-5xl font-bold text-blue-600">$16.99</span>
+              <span class="text-gray-600 ml-2">one-time purchase</span>
+            </div>
+            <ul class="text-left mb-8 space-y-3">
+              <li class="flex items-center text-gray-700">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Unlimited CSV imports
+              </li>
+              <li class="flex items-center text-gray-700">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Advanced spending analysis
+              </li>
+              <li class="flex items-center text-gray-700">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Monthly budget recommendations
+              </li>
+              <li class="flex items-center text-gray-700">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Category breakdowns
+              </li>
+            </ul>
+            <a href="#" class="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors block text-center">
+              Buy Now - $16.99
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">Personal Finance Tracker</h3>
+        <p class="text-gray-400 mb-4">Auto-generated tool by T.O.A.A</p>
+        <p class="text-gray-500 text-sm">&copy; 2024 All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
