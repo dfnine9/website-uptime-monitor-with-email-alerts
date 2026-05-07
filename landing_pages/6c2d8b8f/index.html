@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock portfolio analyzer that fetches current prices via API and generates performance reports with buy/sell recommendations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+  <!-- Hero Section -->
+  <header class="container mx-auto px-4 py-16 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+      Stock Portfolio Analyzer
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+      Real-time portfolio tracking with intelligent buy/sell recommendations powered by live market data
+    </p>
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="mb-6 md:mb-0">
+          <span class="text-3xl md:text-4xl font-bold text-indigo-600">$14.99</span>
+          <span class="text-gray-500 ml-2">one-time purchase</span>
+        </div>
+        <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+          Buy Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+      Powerful Features for Smart Investing
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-300">
+        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Real-Time Price Data</h3>
+        <p class="text-gray-600">Fetches current stock prices via API for accurate, up-to-date portfolio valuation</p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-300">
+        <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Performance Reports</h3>
+        <p class="text-gray-600">Comprehensive analytics and detailed performance reports to track your investment success</p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-300">
+        <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Smart Recommendations</h3>
+        <p class="text-gray-600">AI-powered buy/sell recommendations based on market trends and portfolio analysis</p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-300">
+        <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Easy Setup</h3>
+        <p class="text-gray-600">Quick installation and user-friendly interface - start analyzing your portfolio in minutes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="bg-white rounded-lg shadow-2xl p-8 md:p-12 text-center max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+        Ready to Optimize Your Portfolio?
+      </h2>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        Join thousands of investors who trust our analyzer to make smarter investment decisions. Get instant access for just $14.99.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <div class="flex items-center text-green-600">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          One-time purchase
+        </div>
+        <div class="flex items-center text-green-600">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          Instant download
+        </div>
+        <div class="flex items-center text-green-600">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          No monthly fees
+        </div>
+      </div>
+      <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-lg text-xl transition duration-300 transform hover:scale-105 shadow-lg inline-block">
+        Get Started Now - $14.99
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-400 mb-2">Stock Portfolio Analyzer</p>
+      <p class="text-sm text-gray-500">Auto-generated tool by T.O.A.A</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
