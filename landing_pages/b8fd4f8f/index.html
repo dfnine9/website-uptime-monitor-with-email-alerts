@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Monitor that tracks price changes on e-commerce sites, sends alerts when items drop below target prices, and maintains a historical price database</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        Website Monitor
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+        Never miss a deal again. Track price changes on e-commerce sites and get instant alerts when items drop below your target prices.
+      </p>
+      <div class="bg-white rounded-2xl shadow-xl p-8 mb-12 inline-block">
+        <div class="flex items-center justify-center space-x-4">
+          <div class="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <div class="text-left">
+            <p class="text-sm text-gray-500 uppercase tracking-wide">Powered by</p>
+            <p class="text-lg font-semibold text-gray-900">T.O.A.A Automation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="container mx-auto px-4 py-16">
+    <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Key Features</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-4.5a9.51 9.51 0 00-7.5-9.32c-.55-.14-1.17-.18-1.75-.18"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Real-Time Price Tracking</h3>
+        <p class="text-gray-600">Monitor prices across multiple e-commerce sites automatically, ensuring you never miss a price drop.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-4.5a9.51 9.51 0 00-7.5-9.32c-.55-.14-1.17-.18-1.75-.18"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Instant Price Alerts</h3>
+        <p class="text-gray-600">Get notified immediately when items drop below your target prices via email or push notifications.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h2a2 2 0 01-2-2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Historical Price Database</h3>
+        <p class="text-gray-600">Access comprehensive price history and trends to make informed purchasing decisions.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow md:col-span-2 lg:col-span-1">
+        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Easy Setup & Automation</h3>
+        <p class="text-gray-600">Set up monitoring in minutes with our automated system that requires no technical knowledge.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="max-w-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div class="bg-indigo-600 px-8 py-6">
+        <h3 class="text-2xl font-bold text-white text-center">Get Started Today</h3>
+        <p class="text-indigo-100 text-center mt-2">One-time purchase, lifetime access</p>
+      </div>
+      <div class="px-8 py-8">
+        <div class="text-center mb-8">
+          <span class="text-5xl font-bold text-gray-900">$16.99</span>
+          <p class="text-gray-500 mt-2">Complete automation solution</p>
+        </div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700">Unlimited price monitoring</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700">Instant alerts & notifications</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700">Historical price data</span>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700">Easy setup automation</span>
+          </li>
+        </ul>
+        <a href="#" class="w-full bg-indigo-600 text-white font-bold py-4 px-8 rounded-xl hover:bg-indigo-700 transition-colors text-center block text-lg">
+          Buy Now - $16.99
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h4 class="text-2xl font-bold mb-4">Website Monitor</h4>
+        <p class="text-gray-400 mb-4">Automated price tracking solution by T.O.A.A</p>
+        <div class="border-t border-gray-800 pt-8 mt-8">
+          <p class="text-gray-500 text-sm">&copy; 2024 T.O.A.A. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
