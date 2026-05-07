@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Expense Categorizer - Analyzes bank CSV files and automatically categorizes transactions using keyword matching, then generates spending insights and budget recommendations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-6 py-16">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Personal Finance Expense Categorizer
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Transform your bank CSV files into powerful spending insights with automated transaction categorization and intelligent budget recommendations
+      </p>
+      <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDQwMCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyMDAiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSI0MCIgeT0iNDAiIHdpZHRoPSIzMjAiIGhlaWdodD0iNDAiIGZpbGw9IiNFRkY2RkYiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzA2QjZENCI+CjxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIi8+Cjwvc3ZnPgo8dGV4dCB4PSI4MCIgeT0iNjUiIGZpbGw9IiMzNzQxNTEiIGZvbnQtc2l6ZT0iMTQiPkF1dG9tYXRpYyBDYXRlZ29yaXphdGlvbjwvdGV4dD4KPHN2ZyB4PSI1MCIgeT0iMTAwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IiMzQjgyRjYiPgo8Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIvPgo8L3N2Zz4KPHR2eHQgeD0iODAiIHk9IjExNSIgZmlsbD0iIzM3NDE1MSIgZm9udC1zaXplPSIxNCI+U3BlbmRpbmcgSW5zaWdodHM8L3RleHQ+CjxzdmcgeD0iNTAiIHk9IjE1MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjRjU5RTBCIj4KPGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiLz4KPC9zdmc+Cjx0ZXh0IHg9IjgwIiB5PSIxNjUiIGZpbGw9IiMzNzQxNTEiIGZvbnQtc2l6ZT0iMTQiPkJ1ZGdldCBSZWNvbW1lbmRhdGlvbnM8L3RleHQ+CjxyZWN0IHg9IjI0MCIgeT0iMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjRTVFN0VCIi8+CjxyZWN0IHg9IjI0MCIgeT0iMTAwIiB3aWR0aD0iNzAiIGhlaWdodD0iMTAiIGZpbGw9IiMwNkI2RDQiLz4KPHN2ZyB4PSIyNDAiIHk9IjEzMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIzMCIgZmlsbD0iIzNCODJGNiIvPgo8cmVjdCB4PSIzMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjQ1IiBmaWxsPSIjMDZCNkQ0Ii8+CjxyZWN0IHg9IjYwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IiNGNTlFMEIiLz4KPC9zdmc+Cjwvc3ZnPg==" alt="Personal Finance Tool Preview" class="w-full max-w-2xl mx-auto rounded-lg">
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
+        Powerful Features for Smart Financial Management
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Automatic Categorization</h3>
+          <p class="text-gray-600">Upload your bank CSV files and watch as transactions are automatically sorted into meaningful categories using intelligent keyword matching.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Spending Insights</h3>
+          <p class="text-gray-600">Discover patterns in your spending with detailed analytics and visual reports that reveal where your money goes each month.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Budget Recommendations</h3>
+          <p class="text-gray-600">Get personalized budget suggestions based on your spending patterns to help you save more and spend smarter.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Instant Analysis</h3>
+          <p class="text-gray-600">Process months or years of transaction data in seconds. Get immediate insights without manual data entry or complex setup.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gray-50 py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+        <p class="text-xl text-gray-600">Take control of your finances today</p>
+      </div>
+      
+      <div class="max-w-lg mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-blue-500">
+          <div class="bg-blue-500 text-white text-center py-4">
+            <h3 class="text-xl font-semibold">Personal Finance Tool</h3>
+          </div>
+          <div class="p-8 text-center">
+            <div class="mb-6">
+              <span class="text-5xl font-bold text-gray-900">$19</span>
+              <span class="text-xl text-gray-600">.99</span>
+            </div>
+            <p class="text-gray-600 mb-8">One-time purchase, lifetime access</p>
+            
+            <ul class="text-left space-y-3 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Automatic transaction categorization
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Detailed spending insights
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Smart budget recommendations
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1
+</body>
+</html>
