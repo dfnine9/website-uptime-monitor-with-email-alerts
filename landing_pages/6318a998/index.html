@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal expense tracker that categorizes spending from bank CSV exports and generates budget insights with spending pattern analysis and recommendations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<main class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-6 pt-16 pb-20">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        Personal Expense Tracker
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Transform your bank CSV exports into actionable budget insights with intelligent spending analysis and personalized recommendations
+      </p>
+      <div class="mb-12">
+        <a href="#" class="inline-block bg-indigo-600 text-white text-lg font-semibold px-8 py-4 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          Get Started for $16.99
+        </a>
+      </div>
+      <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-2xl mx-auto">
+        <div class="flex items-center justify-center space-x-4 mb-6">
+          <div class="w-4 h-4 bg-green-400 rounded-full"></div>
+          <div class="w-4 h-4 bg-yellow-400 rounded-full"></div>
+          <div class="w-4 h-4 bg-red-400 rounded-full"></div>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6">
+          <div class="text-left font-mono text-sm text-gray-700">
+            <div class="mb-2">📊 Analyzing bank data...</div>
+            <div class="mb-2">🏷️ Categorizing expenses...</div>
+            <div class="mb-2">💡 Generating insights...</div>
+            <div class="text-green-600">✅ Budget recommendations ready!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Smart Financial Management Made Simple
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Upload your bank CSV files and let our intelligent system do the heavy lifting
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-lg transition duration-300">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Auto-Categorization</h3>
+          <p class="text-gray-600">Automatically categorize your expenses from bank CSV exports with intelligent pattern recognition</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-green-50 to-green-100 hover:shadow-lg transition duration-300">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Spending Analysis</h3>
+          <p class="text-gray-600">Discover spending patterns and trends with detailed visual analytics and insights</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 hover:shadow-lg transition duration-300">
+          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Recommendations</h3>
+          <p class="text-gray-600">Get personalized budget recommendations based on your unique spending habits</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 hover:shadow-lg transition duration-300">
+          <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Secure & Private</h3>
+          <p class="text-gray-600">Your financial data stays secure with local processing and privacy-first design</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gradient-to-br from-indigo-50 to-purple-50 py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Simple, Transparent Pricing
+        </h2>
+        <p class="text-xl text-gray-600">
+          One-time purchase, lifetime access to your personal expense tracker
+        </p>
+      </div>
+      
+      <div class="max-w-md mx-auto">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 text-center border-4 border-indigo-100">
+          <div class="mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Personal Expense Tracker</h3>
+            <div class="text-5xl font-bold text-indigo-600 mb-2">$16.99</div>
+            <p class="text-gray-600">One-time payment</p>
+          </div>
+          
+          <ul class="text-left mb-8 space-y-4">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Automatic expense categorization
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Bank CSV import support
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Spending pattern analysis
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Personalized budget insights
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Lifetime updates
+            </li>
+          </ul>
+          
+          <a href="#" class="block w-full bg-indigo-600 text-white text-lg font-semibold py-4 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Buy Now - $16.99
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold mb-4">Personal Expense Tracker</h3>
+        <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
+          Auto-generated tool by T.O.A.A - Transform your financial data into actionable insights with intelligent expense tracking and budget recommendations.
+        </p>
+        <div class="border-t border-gray-700 pt-6">
+          <p class="text-gray-500 text-sm">
+            © 2024 T.O.A.A. All rights reserved. Take control of your finances today.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+</body>
+</html>
