@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Stock Portfolio Risk Analyzer - Fetches current stock prices via API, calculates portfolio volatility, correlation matrix, and generates a risk assessment report with rebalancing recommendations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Automated Stock Portfolio<br>
+        <span class="text-indigo-600">Risk Analyzer</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+        Take control of your investments with real-time portfolio analysis, risk assessment, and intelligent rebalancing recommendations
+      </p>
+      <div class="bg-white rounded-lg shadow-lg p-6 inline-block">
+        <p class="text-sm text-gray-500 mb-2">Auto-generated tool by</p>
+        <p class="text-lg font-semibold text-indigo-600">T.O.A.A</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Powerful Features for Smart Investing
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Everything you need to analyze, understand, and optimize your stock portfolio's risk profile
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="text-center p-6 rounded-lg bg-gradient-to-b from-blue-50 to-blue-100">
+          <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Real-Time Price Fetching</h3>
+          <p class="text-gray-600">Automatically retrieves current stock prices via API for accurate, up-to-date portfolio valuation</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-gradient-to-b from-green-50 to-green-100">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Volatility Calculation</h3>
+          <p class="text-gray-600">Advanced algorithms calculate portfolio volatility to help you understand your risk exposure</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-gradient-to-b from-purple-50 to-purple-100">
+          <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Correlation Matrix</h3>
+          <p class="text-gray-600">Detailed correlation analysis reveals how your stocks move together, optimizing diversification</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-gradient-to-b from-orange-50 to-orange-100">
+          <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Rebalancing Recommendations</h3>
+          <p class="text-gray-600">Get intelligent suggestions for portfolio rebalancing based on comprehensive risk analysis</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gradient-to-br from-indigo-900 to-purple-900 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-lg mx-auto bg-white rounded-2xl shadow-2xl p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Get Started Today</h3>
+        <div class="mb-6">
+          <span class="text-5xl font-bold text-indigo-600">$19.99</span>
+          <p class="text-gray-500 mt-2">One-time purchase</p>
+        </div>
+        <ul class="text-left space-y-3 mb-8 text-gray-600">
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            Real-time stock price API integration
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            Complete risk assessment reports
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            Portfolio rebalancing recommendations
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            Correlation matrix analysis
+          </li>
+        </ul>
+        <a href="#" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105 text-lg">
+          Buy Now - $19.99
+        </a>
+        <p class="text-sm text-gray-500 mt-4">Instant download after purchase</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="mb-4">
+        <h4 class="text-xl font-bold text-indigo-400">Automated Stock Portfolio Risk Analyzer</h4>
+        <p class="text-gray-400 mt-2">Auto-generated tool by T.O.A.A</p>
+      </div>
+      <div class="border-t border-gray-700 pt-4">
+        <p class="text-gray-400 text-sm">
+          © 2024 T.O.A.A. All rights reserved. | Professional investment analysis tools for modern investors.
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
