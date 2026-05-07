@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated daily weather-based outfit recommendation system that analyzes local weather data and generates clothing suggestions saved to a text file</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<main class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <section class="container mx-auto px-6 py-16 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Smart Weather Wardrobe
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-700 mb-8">
+        Never worry about what to wear again with AI-powered daily outfit recommendations
+      </p>
+      <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+          Automated Daily Weather-Based Outfit Recommendation System
+        </h2>
+        <p class="text-gray-600 leading-relaxed">
+          Our intelligent automation analyzes your local weather data every morning and generates personalized clothing suggestions, automatically saved to your device for easy access throughout the day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="bg-white py-16">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">
+        Why Choose Smart Weather Wardrobe?
+      </h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6 rounded-lg bg-blue-50">
+          <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-semibold mb-3 text-gray-800">Fully Automated</h4>
+          <p class="text-gray-600">Set it once and get daily recommendations without any manual input required.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-green-50">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-semibold mb-3 text-gray-800">Real-Time Weather Data</h4>
+          <p class="text-gray-600">Analyzes current and forecasted weather conditions specific to your location.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-purple-50">
+          <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+              <path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 1h6v4H7V6zm7 10v-1h1a2 2 0 002-2V8a2 2 0 00-2-2h-1V5a1 1 0 10-2 0v1H8V5a1 1 0 00-2 0v1H5a2 2 0 00-2 2v5a2 2 0 002 2h1v1a1 1 0 102 0v-1h6v1a1 1 0 102 0z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-semibold mb-3 text-gray-800">Smart Suggestions</h4>
+          <p class="text-gray-600">Intelligent recommendations for layers, materials, and accessories based on conditions.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-orange-50">
+          <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-semibold mb-3 text-gray-800">Easy Access</h4>
+          <p class="text-gray-600">Daily recommendations saved to text files you can access anytime, anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="bg-gradient-to-r from-indigo-600 to-blue-600 py-16">
+    <div class="container mx-auto px-6 text-center">
+      <div class="max-w-md mx-auto bg-white rounded-lg shadow-xl p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Get Started Today</h3>
+        <div class="text-5xl font-bold text-indigo-600 mb-2">$16.99</div>
+        <p class="text-gray-600 mb-6">One-time purchase • Lifetime access</p>
+        <ul class="text-left text-gray-600 mb-8 space-y-2">
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Automated daily recommendations
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Local weather data analysis
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Easy setup and configuration
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Lifetime updates
+          </li>
+        </ul>
+        <a href="#" class="w-full bg-indigo-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition duration-300 inline-block">
+          Buy Now - $16.99
+        </a>
+        <p class="text-xs text-gray-500 mt-4">Auto-generated automation by T.O.A.A</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-gray-400">&copy; 2024 T.O.A.A. All rights reserved.</p>
+      <p class="text-sm text-gray-500 mt-2">Smart Weather Wardrobe - Never be caught off-guard by the weather again.</p>
+    </div>
+  </footer>
+</main>
+</body>
+</html>
