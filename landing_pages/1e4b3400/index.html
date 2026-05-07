@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Monitor that tracks price changes on e-commerce sites and sends alerts when target prices are reached</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <section class="px-6 py-20 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Website Monitor
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+        Never miss a deal again. Track price changes and get instant alerts when your target prices are reached.
+      </p>
+      <div class="flex justify-center">
+        <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition duration-200 transform hover:scale-105">
+          Get Started for $13.99
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        Why Choose Website Monitor?
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6">
+          <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Price Monitoring</h3>
+          <p class="text-gray-600">Continuously tracks prices across major e-commerce platforms without you lifting a finger.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zm0 0H9a7 7 0 01-7-7V5a2 2 0 012-2h2.93a2 2 0 011.664.89l.812 1.22A2 2 0 0010.07 6H15a2 2 0 012 2v9z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Instant Alerts</h3>
+          <p class="text-gray-600">Get notified immediately when your target price is reached via email or SMS.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Automated Setup</h3>
+          <p class="text-gray-600">Auto-generated automation by T.O.A.A means instant setup with no technical skills required.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Save Money</h3>
+          <p class="text-gray-600">Never pay full price again. Track multiple products and save hundreds on your purchases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="py-16 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+        Simple, Affordable Pricing
+      </h2>
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-md mx-auto">
+        <div class="mb-8">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Website Monitor</h3>
+          <div class="text-5xl font-bold text-indigo-600 mb-2">$13.99</div>
+          <p class="text-gray-600">One-time payment</p>
+        </div>
+        <div class="space-y-4 mb-8">
+          <div class="flex items-center justify-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-gray-700">Unlimited price tracking</span>
+          </div>
+          <div class="flex items-center justify-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-gray-700">Real-time alerts</span>
+          </div>
+          <div class="flex items-center justify-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-gray-700">Multi-platform support</span>
+          </div>
+          <div class="flex items-center justify-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-gray-700">Auto-setup included</span>
+          </div>
+        </div>
+        <a href="#" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition duration-200 transform hover:scale-105 inline-block">
+          Buy Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="mb-4">
+        <h3 class="text-2xl font-bold mb-2">Website Monitor</h3>
+        <p class="text-gray-400">Auto-generated automation by T.O.A.A</p>
+      </div>
+      <div class="border-t border-gray-800 pt-4">
+        <p class="text-gray-400 text-sm">
+          &copy; 2024 Website Monitor. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
