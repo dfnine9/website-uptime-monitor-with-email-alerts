@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Health Monitor - Automated script that checks website uptime, page load speeds, and SSL certificate expiry for multiple URLs, then generates status reports and alerts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gray-50">
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+    <div class="container mx-auto px-4 py-16 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Website Health Monitor</h1>
+      <p class="text-xl md:text-2xl mb-8 opacity-90">Keep Your Websites Running Smoothly with Automated Monitoring</p>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">Automated script that monitors uptime, performance, and security across all your websites with intelligent reporting and instant alerts.</p>
+      <a href="#" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-200 inline-block">Get Started Now</a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Everything You Need to Monitor Your Websites</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Uptime Monitoring</h3>
+          <p class="text-gray-600">Track website availability 24/7 and get notified instantly when sites go down.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Speed Testing</h3>
+          <p class="text-gray-600">Monitor page load speeds and identify performance bottlenecks across all your sites.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">SSL Monitoring</h3>
+          <p class="text-gray-600">Track SSL certificate expiry dates and never let your security certificates lapse.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Automated Reports</h3>
+          <p class="text-gray-600">Generate comprehensive status reports and receive automated alerts for all monitored sites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="bg-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Simple, Affordable Pricing</h2>
+      
+      <div class="max-w-md mx-auto bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg shadow-lg p-8 border-2 border-blue-200">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Website Health Monitor</h3>
+          <div class="text-5xl font-bold text-blue-600 mb-2">$18.99</div>
+          <p class="text-gray-600 mb-6">One-time purchase</p>
+          
+          <ul class="text-left space-y-3 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Monitor multiple URLs
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Automated uptime checks
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Performance monitoring
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              SSL certificate tracking
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Status reports & alerts
+            </li>
+          </ul>
+          
+          <a href="#" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-200 inline-block">Buy Now</a>
+        </div>
+      </div>
+      
+      <p class="text-gray-500 mt-6">Auto-generated automation by T.O.A.A</p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-gray-800 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Start Monitoring Your Websites Today</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Don't wait for your websites to go down. Get proactive monitoring and stay ahead of issues.</p>
+      <a href="#" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-200 inline-block">Get Website Health Monitor Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-400">&copy; 2024 Website Health Monitor. Automated solution by T.O.A.A.</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
