@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Expense Categorizer from Bank CSV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-6 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        Personal Finance Expense Categorizer
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+        Transform your bank CSV files into organized financial insights instantly
+      </p>
+      <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <div class="flex items-center justify-center mb-6">
+          <svg class="w-16 h-16 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012-2m-6 0H9m6 0a2 2 0 002-2V9a2 2 0 00-2-2h-2m-6 0V5a2 2 0 012-2h2a2 2 0 012 2v4"></path>
+          </svg>
+        </div>
+        <p class="text-lg text-gray-700">
+          Auto-generated tool by <span class="font-semibold text-indigo-600">T.O.A.A</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">
+        Key Features
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="text-center p-6 rounded-lg bg-gradient-to-br from-green-50 to-green-100">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Lightning Fast</h3>
+          <p class="text-gray-600">Process your bank CSV files in seconds with automated categorization</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100">
+          <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Categories</h3>
+          <p class="text-gray-600">Intelligent expense categorization for better financial tracking</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg bg-gradient-to-br from-purple-50 to-purple-100">
+          <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Secure & Private</h3>
+          <p class="text-gray-600">Your financial data stays private and secure throughout the process</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg bg-gradient-to-br from-orange-50 to-orange-100">
+          <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Easy Export</h3>
+          <p class="text-gray-600">Download your categorized expenses in multiple formats</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gradient-to-br from-indigo-50 to-blue-50 py-16">
+    <div class="container mx-auto px-6">
+      <div class="max-w-md mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-8">Simple Pricing</h2>
+        <div class="bg-white rounded-2xl shadow-xl p-8 border-4 border-indigo-500">
+          <div class="mb-6">
+            <div class="text-5xl font-bold text-indigo-600 mb-2">$8.99</div>
+            <div class="text-gray-600">One-time purchase</div>
+          </div>
+          <div class="mb-8">
+            <div class="text-lg font-semibold text-gray-900 mb-4">What's included:</div>
+            <ul class="text-left space-y-3">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Unlimited CSV processing
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Smart expense categorization
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Multiple export formats
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Lifetime access
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="w-full bg-indigo-600 text-white text-xl font-semibold py-4 px-8 rounded-lg hover:bg-indigo-700 transition duration-300 inline-block">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="bg-indigo-600 py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">
+        Ready to Organize Your Finances?
+      </h2>
+      <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+        Join thousands of users who have simplified their expense tracking with our powerful categorization tool.
+      </p>
+      <a href="#" class="bg-white text-indigo-600 text-xl font-semibold py-4 px-12 rounded-lg hover:bg-gray-100 transition duration-300 inline-block shadow-lg">
+        Get Started Today - $8.99
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-gray-400">
+        © 2024 Personal Finance Expense Categorizer. Auto-generated tool by T.O.A.A. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
