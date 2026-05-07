@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data Health Analyzer - Analyzes any CSV file to detect data quality issues (missing values, duplicates, outliers, format inconsistencies) and generates a comprehensive report with visualizations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        CSV Data Health Analyzer
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+        Instantly analyze any CSV file to detect data quality issues and generate comprehensive reports with visualizations
+      </p>
+      <div class="flex justify-center mb-12">
+        <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md">
+          <div class="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800">Professional Data Analysis</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Powerful Data Quality Detection</h2>
+        <p class="text-xl text-gray-600">Everything you need to ensure your CSV data is clean and reliable</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+          <div class="w-12 h-12 bg-red-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Missing Values Detection</h3>
+          <p class="text-gray-600">Automatically identify and report missing data points across all columns</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+          <div class="w-12 h-12 bg-yellow-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Duplicate Removal</h3>
+          <p class="text-gray-600">Find and highlight duplicate rows to maintain data integrity</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+          <div class="w-12 h-12 bg-purple-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Outlier Analysis</h3>
+          <p class="text-gray-600">Detect statistical outliers that may indicate data quality issues</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+          <div class="w-12 h-12 bg-green-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Format Validation</h3>
+          <p class="text-gray-600">Check for format inconsistencies and data type mismatches</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gradient-to-r from-blue-600 to-indigo-700 py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-md mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 px-8 py-6">
+          <h3 class="text-2xl font-bold text-white text-center">Professional Tool</h3>
+          <p class="text-blue-100 text-center mt-2">Auto-generated by T.O.A.A</p>
+        </div>
+        
+        <div class="px-8 py-8">
+          <div class="text-center mb-8">
+            <div class="text-5xl font-bold text-gray-900 mb-2">$19.99</div>
+            <p class="text-gray-600">One-time purchase</p>
+          </div>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Unlimited CSV file analysis</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Comprehensive quality reports</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Interactive visualizations</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Export detailed results</span>
+            </div>
+          </div>
+          
+          <a href="#" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 transition-all transform hover:scale-105 block text-center shadow-lg">
+            Buy Now - $19.99
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h4 class="text-xl font-semibold mb-2">CSV Data Health Analyzer</h4>
+        <p class="text-gray-400 mb-4">Professional data quality analysis tool</p>
+        <div class="text-sm text-gray-500">
+          <p>Auto-generated tool by T.O.A.A</p>
+          <p class="mt-2">&copy; 2024 All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
