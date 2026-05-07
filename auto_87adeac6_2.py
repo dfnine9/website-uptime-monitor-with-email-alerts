@@ -1,0 +1,227 @@
+"""
+Daily Outfit Recommendation File Management System
+
+This script generates daily text files containing formatted outfit recommendations,
+timestamps, and weather summaries. Files are organized in a date-based directory
+structure (YYYY/MM/DD format). The script creates comprehensive daily reports
+that include weather-appropriate clothing suggestions, timestamps, and formatted
+summaries stored in an organized filesystem hierarchy.
+
+Dependencies: httpx, anthropic (plus standard library)
+Usage: python script.py
+"""
+
+import os
+import json
+import datetime
+from pathlib import Path
+import httpx
+import anthropic
+
+
+class OutfitRecommendationManager:
+    def __init__(self):
+        self.base_dir = Path("outfit_recommendations")
+        self.weather_api_key = os.environ.get("WEATHER_API_KEY", "demo_key")
+        self.anthropic_client = anthropic.Anthropic(
+            api_key=os.environ.get("ANTHROPIC_API_KEY", "demo_key")
+        )
+        
+    def create_directory_structure(self, date_obj):
+        """Create date-based directory structure YYYY/MM/DD"""
+        try:
+            year_dir = self.base_dir / str(date_obj.year)
+            month_dir = year_dir / f"{date_obj.month:02d}"
+            day_dir = month_dir / f"{date_obj.day:02d}"
+            day_dir.mkdir(parents=True, exist_ok=True)
+            return day_dir
+        except OSError as e:
+            print(f"Error creating directory structure: {e}")
+            return None
+    
+    def get_weather_data(self, city="New York"):
+        """Fetch weather data (mock implementation for demo)"""
+        try:
+            # Mock weather data since we don't have real API keys
+            weather_data = {
+                "temperature": 22,
+                "condition": "Partly Cloudy",
+                "humidity": 65,
+                "wind_speed": 12,
+                "feels_like": 24
+            }
+            print(f"Weather data retrieved for {city}")
+            return weather_data
+        except Exception as e:
+            print(f"Error fetching weather data: {e}")
+            return {
+                "temperature": 20,
+                "condition": "Unknown",
+                "humidity": 50,
+                "wind_speed": 10,
+                "feels_like": 20
+            }
+    
+    def generate_outfit_recommendation(self, weather_data):
+        """Generate outfit recommendation based on weather"""
+        try:
+            temp = weather_data["temperature"]
+            condition = weather_data["condition"].lower()
+            
+            if temp < 10:
+                outfit = {
+                    "top": "Heavy coat or winter jacket",
+                    "bottom": "Warm pants or jeans with thermal layers",
+                    "shoes": "Insulated boots",
+                    "accessories": "Scarf, gloves, warm hat"
+                }
+            elif temp < 20:
+                outfit = {
+                    "top": "Light jacket or sweater",
+                    "bottom": "Long pants or jeans",
+                    "shoes": "Closed-toe shoes or sneakers",
+                    "accessories": "Light scarf (optional)"
+                }
+            else:
+                outfit = {
+                    "top": "T-shirt or light blouse",
+                    "bottom": "Shorts or light pants",
+                    "shoes": "Sandals or light sneakers",
+                    "accessories": "Sunglasses, hat for sun protection"
+                }
+            
+            if "rain" in condition or "storm" in condition:
+                outfit["accessories"] += ", umbrella or raincoat"
+            
+            return outfit
+        except Exception as e:
+            print(f"Error generating outfit recommendation: {e}")
+            return {
+                "top": "Comfortable shirt",
+                "bottom": "Casual pants",
+                "shoes": "Comfortable shoes",
+                "accessories": "As needed"
+            }
+    
+    def format_daily_report(self, date_obj, weather_data, outfit_recommendation):
+        """Format the daily outfit report"""
+        try:
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            report = f"""
+DAILY OUTFIT RECOMMENDATION REPORT
+Generated: {timestamp}
+Date: {date_obj.strftime("%A, %B %d, %Y")}
+
+WEATHER SUMMARY
+===============
+Temperature: {weather_data['temperature']}°C (Feels like {weather_data['feels_like']}°C)
+Condition: {weather_data['condition']}
+Humidity: {weather_data['humidity']}%
+Wind Speed: {weather_data['wind_speed']} km/h
+
+OUTFIT RECOMMENDATION
+====================
+Top: {outfit_recommendation['top']}
+Bottom: {outfit_recommendation['bottom']}
+Shoes: {outfit_recommendation['shoes']}
+Accessories: {outfit_recommendation['accessories']}
+
+NOTES
+=====
+- Check weather updates throughout the day
+- Adjust layers based on indoor/outdoor activities
+- Consider your personal comfort preferences
+- Have backup options available
+
+Report generated by Daily Outfit Recommendation System
+"""
+            return report.strip()
+        except Exception as e:
+            print(f"Error formatting report: {e}")
+            return f"Error generating report: {e}"
+    
+    def save_daily_file(self, date_obj, report_content):
+        """Save the daily report to file"""
+        try:
+            day_dir = self.create_directory_structure(date_obj)
+            if not day_dir:
+                return False
+            
+            filename = f"outfit_recommendation_{date_obj.strftime('%Y%m%d')}.txt"
+            file_path = day_dir / filename
+            
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(report_content)
+            
+            print(f"Daily report saved to: {file_path}")
+            return True
+        except Exception as e:
+            print(f"Error saving daily file: {e}")
+            return False
+    
+    def generate_daily_recommendation(self, target_date=None):
+        """Generate complete daily recommendation"""
+        try:
+            if target_date is None:
+                target_date = datetime.date.today()
+            
+            print(f"Generating outfit recommendation for {target_date}")
+            
+            # Get weather data
+            weather_data = self.get_weather_data()
+            
+            # Generate outfit recommendation
+            outfit_recommendation = self.generate_outfit_recommendation(weather_data)
+            
+            # Format report
+            report_content = self.format_daily_report(target_date, weather_data, outfit_recommendation)
+            
+            # Save to file
+            success = self.save_daily_file(target_date, report_content)
+            
+            if success:
+                print("\n" + "="*50)
+                print("DAILY OUTFIT RECOMMENDATION")
+                print("="*50)
+                print(report_content)
+                print("="*50)
+                return True
+            else:
+                print("Failed to save daily recommendation")
+                return False
+                
+        except Exception as e:
+            print(f"Error generating daily recommendation: {e}")
+            return False
+
+
+def main():
+    """Main execution function"""
+    try:
+        print("Starting Daily Outfit Recommendation System...")
+        
+        # Initialize manager
+        manager = OutfitRecommendationManager()
+        
+        # Generate today's recommendation
+        success = manager.generate_daily_recommendation()
+        
+        if success:
+            print("\nDaily outfit recommendation generated successfully!")
+        else:
+            print("\nFailed to generate daily outfit recommendation")
+            
+        # Optional: Generate for multiple days
+        print("\nGenerating recommendations for the next 3 days...")
+        for i in range(1, 4):
+            future_date = datetime.date.today() + datetime.timedelta(days=i)
+            print(f"\nGenerating for {future_date}...")
+            manager.generate_daily_recommendation(future_date)
+            
+    except Exception as e:
+        print(f"Error in main execution: {e}")
+
+
+if __name__ == "__main__":
+    main()
