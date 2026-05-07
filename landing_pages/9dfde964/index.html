@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web scraper that monitors job postings for specific skills/roles and generates a daily email digest with new opportunities and salary trends</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="bg-white">
+  <!-- Hero Section -->
+  <div class="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Smart Job Monitor
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+          Never miss your dream job again. Get personalized job opportunities and salary insights delivered to your inbox daily.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-200 transform hover:scale-105">
+            Get Started - $15.99
+          </a>
+          <p class="text-blue-200 text-sm">Auto-generated automation by T.O.A.A</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Why Choose Smart Job Monitor?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Streamline your job search with intelligent automation that works 24/7
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200">
+          <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Skill Matching</h3>
+          <p class="text-gray-600">Monitors job postings for your specific skills and roles, ensuring you only see relevant opportunities.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200">
+          <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Daily Email Digest</h3>
+          <p class="text-gray-600">Receive a curated list of new job opportunities directly in your inbox every morning.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200">
+          <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Salary Trend Analysis</h3>
+          <p class="text-gray-600">Track salary trends for your role and location to negotiate better compensation packages.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200">
+          <div class="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Automation</h3>
+          <p class="text-gray-600">Continuous monitoring means you'll never miss a newly posted opportunity, even while you sleep.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Simple, Transparent Pricing
+        </h2>
+        <p class="text-xl text-gray-600">
+          One-time purchase, lifetime access to your job monitoring automation
+        </p>
+      </div>
+      
+      <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-200">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Smart Job Monitor</h3>
+          <div class="mb-6">
+            <span class="text-5xl font-bold text-blue-600">$15.99</span>
+            <span class="text-gray-600 ml-2">one-time</span>
+          </div>
+          
+          <ul class="text-left mb-8 space-y-3 max-w-md mx-auto">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Unlimited job monitoring
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Daily email digest
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Salary trend analysis
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Custom skill/role targeting
+            </li>
+          </ul>
+          
+          <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-12 rounded-lg text-lg transition duration-200 transform hover:scale-105 inline-block">
+            Buy Now - $15.99
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <p class="text-gray-400 mb-2">Smart Job Monitor</p>
+        <p class="text-gray-500 text-sm">Auto-generated automation by T.O.A.A</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
