@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard Generator - Create an HTML dashboard that tracks expenses by analyzing bank CSV exports, showing spending patterns, monthly trends, and budget alerts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Personal Finance Dashboard Generator
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+        Transform your bank CSV exports into powerful HTML dashboards that reveal your spending patterns, track trends, and keep your budget on track
+      </p>
+      <div class="bg-white rounded-lg shadow-xl p-8 md:p-12 max-w-3xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg p-6 text-white">
+              <div class="text-sm opacity-90 mb-2">Dashboard Preview</div>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-sm">Monthly Spending</span>
+                  <span class="font-semibold">$2,847</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-white h-2 rounded-full w-3/4"></div>
+                </div>
+                <div class="text-xs opacity-75">Budget: $3,200</div>
+              </div>
+            </div>
+          </div>
+          <div class="text-left">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Take Control of Your Finances</h3>
+            <p class="text-gray-600 mb-6">Stop wondering where your money goes. Our tool creates beautiful, interactive dashboards from your bank data.</p>
+            <a href="#" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-200 shadow-lg">
+              Get Started Now - $18.99
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Powerful Features for Financial Clarity
+        </h2>
+        <p class="text-xl text-gray-600">Everything you need to understand and optimize your spending habits</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition duration-200">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Expense Analysis</h3>
+          <p class="text-gray-600">Automatically categorize and analyze your spending patterns from bank CSV files</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition duration-200">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Monthly Trends</h3>
+          <p class="text-gray-600">Visualize spending trends over time with interactive charts and graphs</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition duration-200">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-3a2 2 0 10-4 0v3H6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Budget Alerts</h3>
+          <p class="text-gray-600">Get visual warnings when you're approaching or exceeding your budget limits</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition duration-200">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">HTML Dashboard</h3>
+          <p class="text-gray-600">Generate clean, professional HTML dashboards you can view anywhere</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gray-50 py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Simple, Transparent Pricing
+        </h2>
+        <p class="text-xl text-gray-600">One-time purchase, lifetime access</p>
+      </div>
+      
+      <div class="max-w-md mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-indigo-500">
+          <div class="bg-indigo-500 text-white text-center py-6">
+            <h3 class="text-2xl font-bold">Personal Finance Dashboard Generator</h3>
+            <p class="text-indigo-100 mt-2">Auto-generated tool by T.O.A.A</p>
+          </div>
+          <div class="p-8 text-center">
+            <div class="mb-6">
+              <span class="text-5xl font-bold text-gray-900">$18.99</span>
+              <p class="text-gray-600 mt-2">One-time payment</p>
+            </div>
+            <ul class="text-left space-y-3 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                CSV Bank Export Analysis
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Interactive HTML Dashboards
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Budget Tracking & Alerts
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Spending Pattern Analysis
+              </li>
+            </ul>
+            <a href="#" class="w-full bg-indigo-600 text-white py-4 px-8 rounded-lg font-semibold hover:bg-indigo-700 transition duration-200 shadow-lg block text-center">
+              Buy Now - $18.99
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final CTA Section -->
+  <div class="bg-indigo-600 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Ready to Take Control of Your Finances?
+      </h2>
+      <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+        Stop guessing where your money goes. Start making informed financial decisions today.
+      </p>
+      <a href="#" class="inline-block bg-white text-indigo-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition duration-200 shadow-lg">
+        Get Your Dashboard Generator Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold mb-2">Personal Finance Dashboard Generator</h3>
+        <p class="text-gray-400">Auto-generated tool by T.O.A.A</p>
+      </div>
+      <div class="border-t border-gray-800 pt-4">
+        <p class="text-gray-400">&copy; 2024 T.O.A.A. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
