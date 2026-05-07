@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated expense categorizer that reads CSV bank statements and categorizes transactions using keyword matching, then generates a monthly spending report with visualizations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Automated Expense Categorizer
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+        Transform your bank statements into insightful spending reports with intelligent automation
+      </p>
+      <div class="bg-white rounded-lg shadow-xl p-8 mb-12">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="md:w-2/3 text-left mb-6 md:mb-0">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">What it does:</h2>
+            <p class="text-gray-600 text-lg">
+              Reads your CSV bank statements, automatically categorizes transactions using intelligent keyword matching, and generates beautiful monthly spending reports with data visualizations.
+            </p>
+          </div>
+          <div class="md:w-1/3 text-center">
+            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 rounded-lg">
+              <div class="text-3xl font-bold mb-2">$18.99</div>
+              <div class="text-blue-100">One-time purchase</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        Key Features & Benefits
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6 rounded-lg bg-blue-50 hover:shadow-lg transition-shadow">
+          <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">CSV Import</h3>
+          <p class="text-gray-600">Seamlessly reads and processes your bank statement CSV files with no manual formatting required.</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg bg-green-50 hover:shadow-lg transition-shadow">
+          <div class="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Smart Categorization</h3>
+          <p class="text-gray-600">Intelligent keyword matching automatically sorts transactions into relevant spending categories.</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg bg-purple-50 hover:shadow-lg transition-shadow">
+          <div class="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Visual Reports</h3>
+          <p class="text-gray-600">Generate beautiful monthly reports with charts and visualizations to understand your spending patterns.</p>
+        </div>
+
+        <div class="text-center p-6 rounded-lg bg-orange-50 hover:shadow-lg transition-shadow">
+          <div class="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Time Saving</h3>
+          <p class="text-gray-600">Eliminate hours of manual categorization and report creation with complete automation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gradient-to-r from-blue-600 to-indigo-700 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+        Get Started Today
+      </h2>
+      <div class="bg-white rounded-2xl p-8 max-w-md mx-auto shadow-2xl">
+        <div class="text-gray-800">
+          <h3 class="text-2xl font-bold mb-4">Automated Expense Categorizer</h3>
+          <div class="text-5xl font-bold text-blue-600 mb-2">$18.99</div>
+          <p class="text-gray-600 mb-6">One-time purchase • No monthly fees</p>
+          <ul class="text-left space-y-2 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              CSV bank statement import
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Smart keyword categorization
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Monthly visual reports
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Complete automation
+            </li>
+          </ul>
+          <a href="#" class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold py-4 px-8 rounded-lg hover:from-blue-600 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 inline-block w-full">
+            Buy Now - $18.99
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-400 mb-2">Automated Expense Categorizer</p>
+      <p class="text-gray-500 text-sm">Auto-generated automation by T.O.A.A</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
