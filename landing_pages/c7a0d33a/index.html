@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Health Monitor that checks a list of URLs for uptime, response time, and basic SEO metrics, then generates automated status reports via email</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Website Health Monitor
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+        Keep your websites running smoothly with automated uptime monitoring, performance tracking, and SEO insights
+      </p>
+      <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <div class="flex items-center justify-center mb-6">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+        </div>
+        <p class="text-gray-700 text-lg">
+          Automated monitoring solution that checks your URLs for uptime, response time, and basic SEO metrics, then delivers comprehensive status reports directly to your inbox.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        Powerful Features for Website Monitoring
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Real-Time Uptime Monitoring</h3>
+          <p class="text-gray-600">Continuously monitor your website's availability and get instant alerts when issues arise.</p>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Response Time Tracking</h3>
+          <p class="text-gray-600">Monitor page load speeds and performance metrics to ensure optimal user experience.</p>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-6 text-center">
+          <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">SEO Metrics Analysis</h3>
+          <p class="text-gray-600">Track essential SEO indicators to maintain and improve your search engine rankings.</p>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-6 text-center md:col-span-2 lg:col-span-3">
+          <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Automated Email Reports</h3>
+          <p class="text-gray-600">Receive comprehensive status reports automatically delivered to your inbox with detailed insights and actionable recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+        Simple, Affordable Pricing
+      </h2>
+      <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 px-6 py-8 text-white">
+          <h3 class="text-2xl font-bold mb-2">Website Health Monitor</h3>
+          <p class="text-blue-100">Complete automation solution</p>
+        </div>
+        <div class="px-6 py-8">
+          <div class="text-4xl font-bold text-gray-900 mb-4">
+            $16.99
+            <span class="text-lg font-normal text-gray-600">one-time</span>
+          </div>
+          <ul class="text-left space-y-3 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Monitor unlimited URLs
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Automated email reports
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Performance tracking
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              SEO metrics analysis
+            </li>
+          </ul>
+          <a href="#" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
+            Buy Now - $16.99
+          </a>
+        </div>
+      </div>
+      <p class="text-gray-600 mt-6">
+        <span class="text-sm">Powered by T.O.A.A automation technology</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="bg-gradient-to-r from-blue-500 to-indigo-600 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Start Monitoring Your Websites Today
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        Don't wait for problems to find you. Get proactive website monitoring and ensure your online presence stays strong.
+      </p>
+      <a href="#" class="bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-8 rounded-lg text-xl transition duration-300 inline-block shadow-lg">
+        Get Started Now - $16.99
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-2">&copy; 2024 Website Health Monitor. All rights reserved.</p>
+      <p class="text-gray-400 text-sm">Auto-generated automation by T.O.A.A</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
