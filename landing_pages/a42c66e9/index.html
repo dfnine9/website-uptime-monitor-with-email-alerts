@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website uptime monitor that checks a list of URLs every 5 minutes, logs response times and status codes, and generates a daily HTML report with availability statistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Website Uptime Monitor
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Keep your websites running smoothly with automated monitoring every 5 minutes
+      </p>
+      <div class="bg-white rounded-lg shadow-xl p-8 max-w-4xl mx-auto">
+        <div class="flex items-center justify-center mb-6">
+          <svg class="w-16 h-16 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Automated monitoring solution that checks your URLs every 5 minutes, logs response times and status codes, then generates comprehensive daily HTML reports with detailed availability statistics.
+        </p>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">5-Minute Checks</h3>
+          <p class="text-gray-600">Continuous monitoring of your websites every 5 minutes around the clock</p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Response Logging</h3>
+          <p class="text-gray-600">Track response times and status codes for performance insights</p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Daily Reports</h3>
+          <p class="text-gray-600">Automated HTML reports with comprehensive availability statistics</p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Multiple URLs</h3>
+          <p class="text-gray-600">Monitor multiple websites simultaneously from a single dashboard</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="mb-16">
+      <div class="bg-white rounded-2xl shadow-xl max-w-md mx-auto overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6">
+          <h2 class="text-2xl font-bold text-white text-center">Simple Pricing</h2>
+        </div>
+        <div class="p-8 text-center">
+          <div class="text-5xl font-bold text-gray-900 mb-2">$17.99</div>
+          <p class="text-gray-600 mb-6">One-time purchase</p>
+          <ul class="text-left space-y-3 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">5-minute monitoring intervals</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Response time logging</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Daily HTML reports</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Multiple URL support</span>
+            </li>
+          </ul>
+          <a href="#" class="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-4 px-8 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition duration-200 transform hover:scale-105">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional CTA Section -->
+    <div class="text-center bg-gray-900 rounded-2xl px-8 py-12 mb-16">
+      <h2 class="text-3xl font-bold text-white mb-4">Start Monitoring Today</h2>
+      <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+        Don't let website downtime hurt your business. Get instant visibility into your site's performance and availability.
+      </p>
+      <a href="#" class="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold py-4 px-8 rounded-lg hover:from-green-600 hover:to-emerald-600 transition duration-200 transform hover:scale-105 text-lg">
+        Get Started - $17.99
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <p class="mb-2">&copy; 2024 Website Uptime Monitor. All rights reserved.</p>
+        <p class="text-sm text-gray-400">Auto-generated automation by T.O.A.A</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
