@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker that automatically categorizes expenses from bank CSV exports and generates monthly spending insights with visualizations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-6 py-16">
+    <div class="text-center">
+      <h1 class="text-5xl font-bold text-gray-800 mb-6 leading-tight">
+        Personal Finance Tracker
+      </h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Transform your bank CSV exports into powerful spending insights with automatic categorization and beautiful visualizations
+      </p>
+      <div class="mb-12">
+        <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition duration-300 inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          Get Started for $15.99
+        </a>
+      </div>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-2xl p-8 border">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="text-2xl font-bold text-indigo-600 mb-2">📊</div>
+              <div class="text-sm text-gray-600">Visual Dashboard</div>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="text-2xl font-bold text-green-600 mb-2">🏷️</div>
+              <div class="text-sm text-gray-600">Auto Categorization</div>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="text-2xl font-bold text-purple-600 mb-2">📈</div>
+              <div class="text-sm text-gray-600">Monthly Insights</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Our Finance Tracker?</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Simplify your financial management with intelligent automation and actionable insights
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="text-center p-6">
+          <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">⚡</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Automatic Categorization</h3>
+          <p class="text-gray-600">
+            Upload your bank CSV and watch as transactions are intelligently sorted into meaningful categories
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">📊</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Visual Insights</h3>
+          <p class="text-gray-600">
+            Beautiful charts and graphs that make understanding your spending patterns effortless
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">📅</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Monthly Reports</h3>
+          <p class="text-gray-600">
+            Comprehensive monthly spending analysis to help you track progress and identify trends
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🔒</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Privacy First</h3>
+          <p class="text-gray-600">
+            Your financial data stays secure and private - we process everything locally on your device
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gray-50 py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Simple, Transparent Pricing</h2>
+        <p class="text-lg text-gray-600">Get lifetime access to your personal finance tracker</p>
+      </div>
+      
+      <div class="max-w-md mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-indigo-500">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Personal Finance Tracker</h3>
+            <div class="text-5xl font-bold text-indigo-600 mb-2">$15.99</div>
+            <p class="text-gray-600 mb-8">One-time purchase • Lifetime access</p>
+            
+            <ul class="text-left space-y-3 mb-8">
+              <li class="flex items-center">
+                <span class="text-green-500 mr-3">✓</span>
+                <span class="text-gray-700">Automatic expense categorization</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-3">✓</span>
+                <span class="text-gray-700">CSV import from any bank</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-3">✓</span>
+                <span class="text-gray-700">Interactive visualizations</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-3">✓</span>
+                <span class="text-gray-700">Monthly spending insights</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-500 mr-3">✓</span>
+                <span class="text-gray-700">Privacy-focused design</span>
+              </li>
+            </ul>
+            
+            <a href="#" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              Buy Now - $15.99
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="text-center">
+        <h3 class="text-xl font-semibold mb-4">Personal Finance Tracker</h3>
+        <p class="text-gray-400 mb-4">Auto-generated tool by T.O.A.A</p>
+        <p class="text-gray-500 text-sm">
+          Take control of your finances with intelligent expense tracking and insights.
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
