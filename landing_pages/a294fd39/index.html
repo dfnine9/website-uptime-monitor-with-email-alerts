@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Website Health Monitor - Creates a Python script that checks multiple websites for uptime, response times, and SSL certificate expiration, then generates daily HTML reports and sends email alerts for issues</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        Automated Website Health Monitor
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+        Keep your websites running smoothly with automated monitoring, instant alerts, and comprehensive daily reports
+      </p>
+      <div class="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+        <div class="flex items-center justify-center mb-4">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+        </div>
+        <p class="text-gray-700 text-lg">
+          Auto-generated Python automation that monitors uptime, response times, and SSL certificates across all your websites
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">
+        Everything You Need to Monitor Your Websites
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Uptime Monitoring</h3>
+          <p class="text-gray-600">Continuously checks if your websites are accessible and responding properly to visitors.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Response Time Tracking</h3>
+          <p class="text-gray-600">Measures how fast your websites load and identifies performance bottlenecks.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">SSL Certificate Alerts</h3>
+          <p class="text-gray-600">Monitors SSL certificate expiration dates and alerts you before they expire.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Email Reports & Alerts</h3>
+          <p class="text-gray-600">Generates daily HTML reports and sends instant email alerts when issues are detected.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gray-50 py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-lg mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 px-8 py-6">
+          <h3 class="text-2xl font-bold text-white text-center">Complete Website Monitor</h3>
+          <p class="text-blue-100 text-center mt-2">Ready-to-use Python automation script</p>
+        </div>
+        <div class="px-8 py-8">
+          <div class="text-center mb-8">
+            <div class="text-5xl font-bold text-gray-900 mb-2">$19.99</div>
+            <p class="text-gray-600">One-time purchase • Lifetime access</p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Complete Python script with setup instructions</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Monitor unlimited websites</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Automated daily HTML reports</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Email alert system</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">SSL certificate monitoring</span>
+            </li>
+          </ul>
+          
+          <a href="#" class="block w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center py-4 px-6 rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-lg">
+            Buy Now - Get Instant Access
+          </a>
+          
+          <p class="text-sm text-gray-500 text-center mt-4">
+            Auto-generated automation by T.O.A.A
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h4 class="text-xl font-semibold mb-4">Automated Website Health Monitor</h4>
+        <p class="text-gray-400 mb-4">Professional website monitoring made simple with automated Python scripts.</p>
+        <p class="text-gray-500 text-sm">
+          © 2024 T.O.A.A. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
