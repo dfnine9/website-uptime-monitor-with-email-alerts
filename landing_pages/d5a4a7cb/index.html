@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website uptime monitor that checks a list of URLs every 5 minutes and sends email alerts when sites go down</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<main class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <section class="container mx-auto px-4 py-16 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Website Uptime Monitor
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+        Never miss a downtime again. Automated monitoring every 5 minutes with instant email alerts.
+      </p>
+      <div class="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md mb-8">
+        <div class="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+        <span class="text-sm font-medium text-gray-700">Auto-generated automation by T.O.A.A</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        Key Features
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">5-Minute Checks</h3>
+          <p class="text-gray-600">Continuous monitoring every 5 minutes ensures rapid detection of any downtime.</p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Instant Email Alerts</h3>
+          <p class="text-gray-600">Get notified immediately via email when any of your websites goes down.</p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Multiple URLs</h3>
+          <p class="text-gray-600">Monitor an entire list of websites from a single, centralized dashboard.</p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Fully Automated</h3>
+          <p class="text-gray-600">Set it up once and let the automation handle all monitoring tasks for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+        Simple, Affordable Pricing
+      </h2>
+      <div class="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-200">
+        <div class="mb-6">
+          <span class="text-5xl font-bold text-gray-900">$13.99</span>
+          <span class="text-gray-600 ml-2">one-time purchase</span>
+        </div>
+        <p class="text-gray-600 mb-8">Complete website uptime monitoring automation with email alerts</p>
+        <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors transform hover:scale-105">
+          Buy Now
+        </a>
+        <p class="text-sm text-gray-500 mt-4">Instant delivery • No monthly fees • Full automation included</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Monitor Your Websites?</h2>
+      <p class="text-xl text-gray-300 mb-8">Join thousands of website owners who never worry about downtime</p>
+      <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors transform hover:scale-105">
+        Get Started Today
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-400 mb-2">Website Uptime Monitor</p>
+      <p class="text-sm text-gray-500">Auto-generated automation by T.O.A.A</p>
+    </div>
+  </footer>
+</main>
+</body>
+</html>
