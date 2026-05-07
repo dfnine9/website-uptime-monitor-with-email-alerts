@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Performance Monitor - Automatically check website loading speeds, uptime, and generate performance reports with recommendations for optimization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-6 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        Web Performance Monitor
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+        Automatically monitor your website's loading speeds, uptime, and get actionable optimization recommendations
+      </p>
+      <div class="flex justify-center">
+        <div class="bg-white rounded-2xl shadow-xl p-8 max-w-2xl">
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Monitor. Analyze. Optimize.</h3>
+          <p class="text-gray-600">Keep your website running at peak performance with continuous monitoring and expert recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
+        <p class="text-xl text-gray-600">Everything you need to keep your website performing at its best</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100">
+          <div class="w-12 h-12 bg-blue-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Speed Monitoring</h3>
+          <p class="text-gray-600">Continuously track your website loading speeds and identify performance bottlenecks automatically.</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-green-50 to-green-100">
+          <div class="w-12 h-12 bg-green-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Uptime Tracking</h3>
+          <p class="text-gray-600">Get instant alerts when your website goes down and track uptime statistics over time.</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100">
+          <div class="w-12 h-12 bg-purple-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Performance Reports</h3>
+          <p class="text-gray-600">Receive detailed reports with comprehensive analytics and performance metrics.</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100">
+          <div class="w-12 h-12 bg-orange-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Recommendations</h3>
+          <p class="text-gray-600">Get actionable optimization suggestions to improve your website's performance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gradient-to-br from-gray-50 to-gray-100 py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Simple Pricing</h2>
+        <p class="text-xl text-gray-600">Get started with professional website monitoring today</p>
+      </div>
+      
+      <div class="max-w-md mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-blue-200">
+          <div class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-8 text-center text-white">
+            <h3 class="text-2xl font-bold mb-2">Web Performance Monitor</h3>
+            <p class="text-blue-100">Complete monitoring solution</p>
+          </div>
+          
+          <div class="px-6 py-8">
+            <div class="text-center mb-8">
+              <div class="text-5xl font-bold text-gray-900 mb-2">$16.99</div>
+              <p class="text-gray-600">One-time purchase</p>
+              <p class="text-sm text-blue-600 font-medium mt-2">Auto-generated tool by T.O.A.A</p>
+            </div>
+            
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-700">Automatic speed monitoring</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-700">24/7 uptime tracking</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-700">Detailed performance reports</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-700">Optimization recommendations</span>
+              </div>
+            </div>
+            
+            <a href="#" class="block w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white text-center py-4 px-6 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Buy Now - $16.99
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="bg-gradient-to-r from-blue-600 to-blue-700 py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Optimize Your Website?</h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Don't let slow loading times and downtime hurt your business. Start monitoring your website's performance today.</p>
+      <a href="#" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+        Get Started Now - $16.99
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-12">
+    <div class="container mx-auto px-6">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold text-white mb-4">Web Performance Monitor</h3>
+        <p class="text-gray-400 mb-6">Auto-generated tool by T.O.A.A</p>
+        <div class="border-t border-gray-800 pt-6">
+          <p class="text-gray-500 text-sm">&copy; 2024 Web Performance Monitor. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
