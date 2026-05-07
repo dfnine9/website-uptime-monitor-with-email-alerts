@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://example.com",
+    "timestamp": "2026-04-22T20:38:46.625378",
+    "status": "up",
+    "status_code": 200,
+    "response_time": 0.273,
+    "ssl_certificate": {
+      "expiry_date": "2026-07-01T21:24:46",
+      "days_until_expiry": 70,
+      "status": "valid"
+    }
+  },
+  {
+    "url": "https://google.com",
+    "timestamp": "2026-04-22T20:38:46.994807",
+    "status": "up",
+    "status_code": 200,
+    "response_time": 0.334,
+    "ssl_certificate": {
+      "expiry_date": "2026-06-22T08:35:16",
+      "days_until_expiry": 60,
+      "status": "valid"
+    }
+  }
+]
