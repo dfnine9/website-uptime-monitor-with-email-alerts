@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Alert System - Monitor specific stocks and send email alerts when price thresholds are crossed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+  <!-- Hero Section -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Stock Price Alert System
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+        Never miss a trading opportunity again. Monitor your stocks and get instant email alerts when prices hit your target thresholds.
+      </p>
+      <div class="flex justify-center items-center space-x-4 mb-12">
+        <div class="bg-white px-4 py-2 rounded-full shadow-md">
+          <span class="text-sm text-gray-500">Powered by</span>
+          <span class="text-sm font-semibold text-indigo-600">T.O.A.A</span>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-2xl mx-auto">
+          <div class="flex items-center justify-center space-x-4">
+            <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+              </svg>
+            </div>
+            <div class="text-left">
+              <h3 class="text-2xl font-bold text-gray-900">Real-Time Monitoring</h3>
+              <p class="text-gray-600">24/7 automated stock price tracking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="bg-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Why Choose Our Alert System?
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Smart automation that works around the clock to keep you informed of market movements
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7H4l5-5v5z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Custom Price Thresholds</h3>
+          <p class="text-gray-600">Set your own buy and sell price alerts for any stock</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-green-50 to-emerald-50 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Instant Email Alerts</h3>
+          <p class="text-gray-600">Get notified immediately when your price targets are hit</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-purple-50 to-violet-50 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">24/7 Monitoring</h3>
+          <p class="text-gray-600">Continuous tracking even when markets are closed</p>
+        </div>
+
+        <div class="text-center p-6 rounded-xl bg-gradient-to-br from-orange-50 to-red-50 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Easy Setup</h3>
+          <p class="text-gray-600">Ready-to-use automation, no coding required</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="bg-gradient-to-br from-indigo-50 to-purple-50 py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+          Simple, Affordable Pricing
+        </h2>
+        
+        <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-4 border-indigo-100">
+          <div class="mb-8">
+            <div class="text-6xl md:text-7xl font-bold text-indigo-600 mb-2">
+              $12.99
+            </div>
+            <p class="text-xl text-gray-600">One-time purchase</p>
+            <p class="text-sm text-gray-500 mt-2">Lifetime access • No monthly fees</p>
+          </div>
+          
+          <ul class="text-left space-y-4 mb-8">
+            <li class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Monitor unlimited stocks</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Custom price threshold alerts</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Real-time email notifications</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">24/7 automated monitoring</span>
+            </li>
+          </ul>
+          
+          <a href="#" class="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xl font-semibold py-4 px-8 rounded-2xl hover:from-indigo-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+            Buy Now - Get Instant Access
+          </a>
+          
+          <p class="text-sm text-gray-500 mt-4">
+            Secure payment • Instant download • 30-day money-back guarantee
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold mb-4">Stock Price Alert System</h3>
+        <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
+          Professional automation solution powered by T.O.A.A. Take control of your investment strategy with intelligent price monitoring.
+        </p>
+        <div class="border-t border-gray-800 pt-8 mt-8">
+          <p class="text-gray-500 text-sm">
+            © 2024 T.O.A.A Automation Solutions. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
