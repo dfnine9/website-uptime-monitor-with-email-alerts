@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Performance Monitor - Automatically checks response times and uptime for a list of websites, stores historical data in JSON files, and creates performance trend reports with alerts for downtime or slow response times</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+<div class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+  <!-- Hero Section -->
+  <section class="container mx-auto px-4 py-16 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Website Performance Monitor
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">
+        Keep your websites running smoothly with automated monitoring, historical tracking, and intelligent alerts
+      </p>
+      <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <div class="flex items-center justify-center space-x-4 mb-4">
+          <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+          <span class="text-lg font-semibold text-gray-700">Monitoring Active</span>
+        </div>
+        <p class="text-gray-600">Automatically checks response times and uptime for all your websites</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+      Powerful Features for Website Monitoring
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Automatic Monitoring</h3>
+        <p class="text-gray-600">Continuously checks response times and uptime for all your websites without manual intervention</p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Historical Data Storage</h3>
+        <p class="text-gray-600">Stores comprehensive performance data in JSON files for long-term analysis and trending</p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Performance Reports</h3>
+        <p class="text-gray-600">Creates detailed trend reports showing performance patterns and identifying potential issues</p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM9 7H4l5-5v5zm6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Alerts</h3>
+        <p class="text-gray-600">Instant notifications for downtime or slow response times to keep you informed when issues arise</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="max-w-lg mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+      <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6 text-center">
+        <h3 class="text-2xl font-bold text-white mb-2">Website Performance Monitor</h3>
+        <p class="text-blue-100">Professional monitoring solution</p>
+      </div>
+      <div class="px-8 py-8 text-center">
+        <div class="text-5xl font-bold text-gray-900 mb-2">$19.99</div>
+        <p class="text-gray-600 mb-8">One-time purchase • Lifetime access</p>
+        
+        <ul class="text-left space-y-3 mb-8">
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Unlimited website monitoring
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Historical data storage
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Performance trend reports
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Downtime & slow response alerts
+          </li>
+        </ul>
+        
+        <a href="#" class="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold py-4 px-8 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition duration-200 transform hover:scale-105">
+          Buy Now - Start Monitoring
+        </a>
+        
+        <p class="text-sm text-gray-500 mt-4">Auto-generated tool by T.O.A.A</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-300">© 2024 Website Performance Monitor. Auto-generated tool by T.O.A.A</p>
+      <p class="text-gray-400 mt-2">Keep your websites running at peak performance</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
